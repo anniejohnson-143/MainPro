@@ -1,0 +1,37 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block content %}
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          <br>
+          Result :
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <div class="form_container">
+            <img src="{{img}}" alt="">
+            <br>
+            <br>
+            <h1>OUTPUT : {{pred}}</h1>
+            <br>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="img-box">
+            <img src="{% static 'images/contact-img.jpg' %}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+ 
+
+
+  {% endblock content %}

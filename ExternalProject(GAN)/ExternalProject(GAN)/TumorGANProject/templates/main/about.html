@@ -1,0 +1,40 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{% static 'images/about-img.jpg' %}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About <span>Us</span>
+              </h2>
+            </div>
+            <p>
+              At TumorDetect AI, we are dedicated to revolutionizing healthcare with advanced AI-powered tumor detection. Our cutting-edge technology analyzes medical scans with high precision, assisting doctors in early diagnosis and effective treatment planning. We believe in leveraging artificial intelligence, deep learning, and medical expertise to improve patient outcomes and save lives.
+              
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+
+  
+
+{% endblock content %}
+

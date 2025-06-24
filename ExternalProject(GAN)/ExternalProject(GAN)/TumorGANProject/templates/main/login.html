@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ffffff, #16c6a8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: center;
+      }
+      .login-container {
+        background: white;
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        width: 500px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 50px; /* Prevent overlap with footer */
+      }
+      .login-container h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        color: #333;
+      }
+      .login-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+      .login-container input {
+        height: 55px;
+        width: 100%;
+        padding-left: 15px;
+        border: 1px solid #c9c9c9;
+        outline: none;
+        color: #5c5c5c;
+        font-size: 18px;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+      .login-container button {
+        width: 100%;
+        height: 55px;
+        color: white;
+        background: #47b8a5;
+        border: none;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 6px;
+      }
+      .login-container button:hover {
+        background-color: #0e7d6b;
+      }
+      .login-container p {
+        margin-top: 20px;
+        color: #5c5c5c;
+        font-size: 16px;
+      }
+      .login-container a {
+        color: #16c6a8;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .login-container a:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        width: 100%;
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      {% if messages %} {% for message in messages %}
+      <div class="alert alert-danger small-box" role="alert">{{ message }}</div>
+      {% endfor %} {% endif %}
+
+      <div class="login-fields">
+        <form method="POST">
+            {% csrf_token %}
+            
+        <input type="text" name="username" placeholder="Username" required />
+        <br />
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="#">Contact the Admin</a></p>
+    </form>
+    </div>
+
+    <div class="footer">&copy; 2025 All Rights Reserved | Author</div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block content %}
+  <!-- treatment section -->
+
+  <section class="treatment_section layout_padding">
+    <div class="side_img">
+      <img src="{% static 'images/treatment-side-img.jpg' %}" alt="">
+    </div>
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Hospital <span>Treatment</span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/t1.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Tumor Screening
+
+              </h4>
+              <p>
+                Advanced imaging techniques like MRI and CT scans help in early tumor detection, ensuring timely intervention.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/t2.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Oncology Consultation
+              </h4>
+              <p>
+                Get expert consultation from oncologists to determine the best treatment options based on AI-assisted reports.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/t3.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Medicine or treatment plan
+              </h4>
+              <p>
+                We provide customized treatment recommendations based on tumor type, stage, and patient history.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/t4.png' %}" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Detection of Tumor
+              </h4>
+              <p>
+                we can detect tumors at an early stage, allowing for timely treatment and management.
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end treatment section -->
+
+  
+{% endblock content %}

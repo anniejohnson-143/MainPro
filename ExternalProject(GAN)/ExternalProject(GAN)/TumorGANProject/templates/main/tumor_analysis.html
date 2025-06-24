@@ -1,0 +1,45 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Contact Section -->
+ <br>
+<section class="contact_section layout_padding-bottom">
+  <div class="container">
+    <div class="heading_container text-center">
+      <h2 class="section-title">Input Your Image</h2>
+      <p class="section-subtitle">Upload an image for analysis and get instant results.</p>
+    </div>
+    
+    <div class="row justify-content-center">
+      <!-- Form Section -->
+      <div class="col-md-7">
+        <div class="form_container shadow p-4 rounded bg-white">
+          <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group mb-3">
+              <input type="file" name="img" class="form-control" />
+            </div>
+            
+            <div class="btn_box text-center">
+              <button class="btn btn-primary w-100">
+                <i class="fas fa-upload"></i> Upload Image
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Image Display Section -->
+      <div class="col-md-5">
+        <div class="img-box">
+          <img src="{% static 'images/contact-img.jpg' %}" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+{% endblock content %}

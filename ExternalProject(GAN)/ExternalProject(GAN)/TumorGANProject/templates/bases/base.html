@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Tumor Prediction</title>
+    <link rel="icon" type="image/png" href="{% static 'images/globe.png' %}" />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.css' %}"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Owl Carousel -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+    <!-- Nice Select -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    />
+
+    <!-- Datepicker -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+
+    <!-- Custom styles -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  </head>
+
+  <body class="sub_page">
+    <div class="hero_area">
+      <header class="header_section">
+        <div class="header_top">
+          <div class="container">
+            <div class="contact_nav">
+              <a href=""
+                ><i class="fa fa-phone"></i>
+                <span>Call : +01 123455678990</span></a
+              >
+              <a href=""
+                ><i class="fa fa-envelope"></i>
+                <span>Email : demo@gmail.com</span></a
+              >
+              <a href=""
+                ><i class="fa fa-map-marker"></i> <span>Location</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="header_bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'images/logomainpage.png' %}" alt="" />
+              </a>
+
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+              >
+                <span class=""> </span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="{% url 'about' %}"> About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'treatment' %}">Treatment</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'tumor_analysis' %}">Tumor Analysis</a></li>
+                </ul>
+              
+                <ul class="navbar-nav ms-auto" style="margin-left: auto;">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}">
+                      Logout   
+                      <img src="{% static 'images/logout_icon.png' %}" alt="Logout" style="height: 30px; width: 30px;">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    {% block content %} {% endblock content %}
+
+    <!-- info section -->
+    <section class="info_section">
+      <div class="container">
+        <div class="info_top">
+          <div class="info_logo">
+            <a href="">
+              <img src="{% static 'images/logomainpage.png' %}" alt="" />
+            </a>
+          </div>
+          <div class="info_form">
+            <form action="">
+              <input type="email" placeholder="Your email" />
+              <button>Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="info_bottom layout_padding2">
+          <div class="row info_main_row">
+            <div class="col-md-6 col-lg-3">
+              <h5>Address</h5>
+              <div class="info_contact">
+                <a href="">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span> Location </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span> Call +01 1234567890 </span>
+                </a>
+                <a href="">
+                  <i class="fa fa-envelope"></i>
+                  <span> demo@gmail.com </span>
+                </a>
+              </div>
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="info_links">
+                <h5>Useful link</h5>
+                <div class="info_links_menu">
+                  <a class="active" href="{% url 'index' %}"> Home </a>
+                  <a href="{% url 'about' %}"> About </a>
+                  <a href="{% url 'treatment' %}"> Treatment </a>
+
+                  <a href="{% url 'tumor_analysis' %}"> Tumor Analysis </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer_section">
+      <div class="container">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">Author</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+
+    <!-- Nice Select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Datepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>
